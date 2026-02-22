@@ -1,0 +1,161 @@
+.card-body:has(> .collectionEvent) {
+    border: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.collection-container-box {
+    width: 100%; 
+}
+
+@media (min-width: 768px) {
+    .collection-container-box { width: 720px; }
+}
+@media (min-width: 992px) {
+    .collection-container-box { width: 960px; }
+}
+@media (min-width: 1200px) {
+    .collection-container-box { width: 1140px; }
+}
+@media (min-width: 1400px) {
+    .collection-container-box { width: 1320px; }
+}
+
+.card{
+    border: none;
+}
+
+.collectionEvent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.carouse-context {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+
+}
+
+.carsouse-title {
+    display: flex;
+    align-items: end;
+}
+
+.carsouse-title p {
+    color: var(--titlecolor);
+    margin-bottom: 0 !important;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.carsouse-title a {
+    color: var(--titlecolor);
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.collection-container {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.collection-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.collection-card {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.box-description{
+    position: absolute;
+    height: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    overflow: hidden;
+    transition: height 0.8s ease-in-out;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.collection-card:hover .box-description {
+    height: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    transition-delay: 300ms;
+    padding: 15px;
+}
+
+.collection-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* หน้าเเท็บเล็ต */
+@media (min-width : 992px) {
+    .collection-item {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .collection-card {
+        max-width: 290px;
+    }
+
+    .carsouse-title p {
+        color: var(--titlecolor);
+        margin-bottom: 0 !important;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .carsouse-title a {
+        color: var(--titlecolor);
+        font-size: 1.5rem;
+        font-weight: 200;
+    }
+}
+
+/* หน้าจอใหญ่ */
+@media (min-width : 1200px) {
+    .collection-item {
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .collection-card {
+        max-width: 420px;
+    }
+    
+}

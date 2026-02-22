@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+  <name>Event collection PSU</name>
+  <version>1.0.2</version>
+  <author>me</author>
+  <creationDate>today</creationDate>
+  <description>
+      Module เกี่ยวกิจกรรม ทุน เเละอื่นๆ ที่ต้องการ collection  
+      Fields ที่ใช้มี ("url-event", "image-event", "description-event") 
+      เเล้วก็ตั้งชื่อ Group Field ที่ต้องการใช้ ชื่อต้องตั้งเหมือนกับ module นี้
+  </description>
+  <namespace path="src">My\Module\EventCollection</namespace>
+  <files>
+    <folder module="mod_event_collection">services</folder>
+    <folder>src</folder>
+    <folder>tmpl</folder>
+  </files>
+  <media destination="mod_event_collection" folder="media">
+    <filename>joomla.asset.json</filename>
+    <folder>js</folder>
+    <folder>css</folder>
+  </media>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field
+          name="evnetitle" 
+          type="text" 
+          default="เรื่อง" 
+          label="ชื่อหัวข้อ" 
+          description="ใส่ชื่อเรื่องที่ต้องการ"
+          size="10"
+        />
+        <field
+          name="urlallevents" 
+          type="url" 
+          default="http://www.example.com" 
+          label="ลิงค์สำหรับดูทั้งหมด" 
+          description="" 
+          size="10"
+        />
+        <field
+          name="titlecolor" 
+          type="color" 
+          default="#1854BA" 
+          format="rgba"
+          label="สีหัวข้อ"
+          description="เลือกสีหัวข้อ"
+        />
+        <field
+          name="backgroundcolor" 
+          type="color" 
+          default="#eee" 
+          format="rgba"
+          label="สีพื้นหลัง"
+          description="เลือกสีพื้นหลัง"
+        />
+        <field
+          name="groupField" 
+          type="text" 
+          default="พิมพ์ชื่อ Group Field" 
+          label="Group Field" 
+          description="เลือก Group Field ที่ต้องการให้เเสดง ใน Module นี้"
+          size="10"
+        />
+        <field
+          name="eventcategory" 
+          type="category" 
+          extension="com_content" 
+          label="ประเภท/หมวด" 
+          description="ประเภท/หมวด ที่ต้องการให้เเสดง"
+        />
+        
+      </fieldset>
+    </fields>
+  </config>
+</extension>
