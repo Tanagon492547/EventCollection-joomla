@@ -6,7 +6,7 @@
   <creationDate>today</creationDate>
   <description>
       Module เกี่ยวกิจกรรม ทุน เเละอื่นๆ ที่ต้องการ collection  
-      Fields ที่ใช้มี ("url-event", "image-event", "description-event") 
+      Fields ที่ใช้มี ("url-event", "image-event", "description-event", "colletion-id") 
       เเล้วก็ตั้งชื่อ Group Field ที่ต้องการใช้ ชื่อต้องตั้งเหมือนกับ module นี้
   </description>
   <namespace path="src">My\Module\EventCollection</namespace>
@@ -58,9 +58,9 @@
         <field
           name="groupField" 
           type="text" 
-          default="พิมพ์ชื่อ Group Field" 
-          label="Group Field" 
-          description="เลือก Group Field ที่ต้องการให้เเสดง ใน Module นี้"
+          default="colletion ID" 
+          label="Colletion ID" 
+          description="พิพม์ colletion ID ที่ต้องการให้เเสดง ใน Module นี้"
           size="10"
         />
         <field

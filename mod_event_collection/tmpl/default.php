@@ -31,8 +31,9 @@ $wa->useStyle('mod_event_collection.example');
                             $imgPath = !empty($imgObj->imagefile) ? explode('#', $imgObj->imagefile)[0] : 'images/default.jpg';
                             $urlEvent = $item->jcfields['url-event']->rawvalue ?? '#';
                             $descriptionEvent = $item->jcfields['description-event']->value ?? 'ไม่มีคำอธิบาย';
+                            $colletionID = $item -> jcfields['colletion-id'] -> value ?? '1';
                             ?>
-                            <?php if ($imgPath): ?>
+                            <?php if ($imgPath && $colletionID == $groupField): ?>
                                 <a href="<?php echo htmlspecialchars($urlEvent); ?>" target="_blank" rel="noopener"
                                     class="collection-card">
                                     <div class="box-description overflow-hidden">
@@ -40,8 +41,6 @@ $wa->useStyle('mod_event_collection.example');
                                     </div>
                                     <img src="<?php echo htmlspecialchars($imgPath); ?>" alt="event image">
                                 </a>
-                            <?php else: ?>
-                                <div class="collection-card no-image">ไม่มีรูป</div>
                             <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>

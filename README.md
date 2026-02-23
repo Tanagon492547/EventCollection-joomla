@@ -13,6 +13,7 @@
 | url-event      | ลิงค์ | url |
 | image-event     | ภาพ | media |
 | description-event | คำอธิบาย | text |
+| colletion-id | หมายเลขกลุ่ม colletion id เช่น 1, 2, 3 เป็นต้น โดยที่ colletion id ต้องตรงกับ Colletion ID ใน site module | text |
 
 ## เลือก Group Filed 
 
